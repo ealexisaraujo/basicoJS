@@ -37,3 +37,21 @@ const productosMapeados = productos.map(item => {
 });
 
 console.log(productosMapeados);
+
+//Ayuda a encontrar algo dentro del array de productos
+const productosFind = productos.find(item => {
+  return item.nombre === 'Laptop';
+});
+
+console.log(productosFind);
+
+productos.forEach(item => {
+  console.log(item.nombre);
+});
+
+//some se genera un nuevo array, regresa un condicion en boolean
+const articulosBaratos = productos.some(item => {
+  return item.costo <= 700;
+});
+
+console.log(articulosBaratos);
